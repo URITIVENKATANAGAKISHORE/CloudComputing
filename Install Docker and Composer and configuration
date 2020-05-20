@@ -1,0 +1,28 @@
+Now for installing docker run below command
+sudo yum install -y docker
+
+Start Docker Service
+sudo service docker start
+
+Run below command to get docker service up automatically after reboot
+sudo chkconfig docker on
+
+Optionally, create a new user for Docker management and add him to Docker (default) group
+cat /etc/group
+useradd dockeradmin
+passwd dockeradmin
+usermod -aG docker dockeradmin
+id dockeradmin
+
+install docker compose 
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /opt/docker-compose > /dev/null
+
+For permission
+sudo chmod +x /opt/docker-compose
+
+Create a symbolic link
+ln -s /opt/docker-compose /usr/bin/docker-compose
+
+Check docker-compose version
+docker compose --version
