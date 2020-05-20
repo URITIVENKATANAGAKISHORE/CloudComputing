@@ -1,1 +1,26 @@
-Container and System Monitoring on AWS with Docker, Prometheus, and Grafana
+===========================================================================================
+==       Container and System Monitoring with Docker, Prometheus, and Grafana     ==
+===========================================================================================
+
+Monitoring is an important part of the infrastructure. Without Monitoring, Alerting an infrastructure cannot be stable. 
+I am going to show in detail how to monitor Docker containers using Prometheus, Grafana, CAdvisor, Node Exporter, Docker.
+
+===============
+== Tools Use ==
+===============
+
+Prometheus  
+Grafana
+Node Exporter
+CAdvisor
+
+Steps 1:- Pull the docker images from docer hub or you can have you own docker compose file depends on you choice
+
+Pull request 
+============
+
+CAdvisor :- docker pull google/cadvisor
+Prometheus :- docker pull prom/prometheus
+Grafana :- docker pull grafana/grafana:latest
+Node Exporter :- docker pull prom/node-exporter
+
